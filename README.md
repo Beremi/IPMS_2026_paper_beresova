@@ -7,23 +7,23 @@ https://beremi.github.io/IPMS_2026_paper_beresova/paper/
 ```
 
 Use this URL for the presentation QR code. The QR code should not point
-directly at the PDF, because this stable URL can later be redirected to arXiv
+directly at the destination page, because this stable URL can be redirected
 without changing the QR image.
 
 Current setup:
 
 ```text
-/paper/ -> /paper.pdf
+https://beremi.github.io/IPMS_2026_paper_beresova/paper/ -> https://arxiv.org/abs/2606.14743
 ```
 
-After the arXiv page is public, update the redirect:
+Fallback short URL:
 
-```bash
-scripts/set-arxiv-redirect.sh https://arxiv.org/abs/XXXX.XXXXX
+```text
+https://beremi.github.io/paper/
 ```
 
-Then commit and push the changed `paper/index.html`. The QR image stays the
-same.
+The fallback URL also redirects to the same arXiv page, so earlier QR copies
+continue to work.
 
 QR assets for slides:
 
